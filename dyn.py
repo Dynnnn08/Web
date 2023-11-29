@@ -50,9 +50,8 @@ st.markdown(html_code, unsafe_allow_html=True)
 st.markdown("""<h1 style="color: white;">A Computer Engineer Student's Blog</h1>""",unsafe_allow_html=True)
 
 # Assets Loader
-IMG1= Image.open("images/Streamlit_Img.jpg")
-IMG2= Image.open("images/hppy.jpg")
-
+image_path1= "images/Streamlit_Img.jpg"
+image_path2= "images/Steamlit_Happy.jpg"
 
 
 with st.container():
@@ -104,7 +103,11 @@ st.markdown(contact_form,unsafe_allow_html=True)
 with st.container():
     image_column, text_column = st.columns((1, 2))
     with image_column:
-        st.image(IMG1)  
+        if os.path.exists(image_path1):
+            IMG1 = Image.open(image_path1)
+            st.image(IMG1)
+        else:
+            st.error(f"File '{image_path1}' not found. Please check the file path.")  
         
     with text_column:
         st.subheader("Challenges in Computer Engineering")
@@ -139,7 +142,11 @@ Despite these challenges, computer engineering can be a rewarding and challengin
 with st.container():
     image_column, text_column = st.columns((1, 2))
     with image_column:
-        st.image(IMG2)
+        if os.path.exists(image_path2):
+            IMG2 = Image.open(image_path2)
+            st.image(IMG2)
+        else:
+            st.error(f"File '{image_path2}' not found. Please check the file path.")
     with text_column:
         st.subheader("Happy")
         st.write(
