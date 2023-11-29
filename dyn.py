@@ -139,7 +139,7 @@ Despite these challenges, computer engineering can be a rewarding and challengin
 with st.container():
     image_column, text_column = st.columns((1, 2))
     with image_column:
-        st.image(IMG1)
+        st.image(IMG2)
     with text_column:
         st.subheader("Happy")
         st.write(
@@ -180,25 +180,5 @@ In addition to the reasons listed above, here are some specific examples of thin
 
 These are just a few of the many things that make computer engineering students happy. If you are considering a career in computer engineering, I encourage you to learn more about this exciting and rewarding field.
             """
-            
-        )
-        
-with st.container():
-    image_column, text_column = st.columns((1, 2))
-    with image_column:
-        st.image()
-    with text_column:
-        st.subheader("")
-        st.write(
-            
-        )
-        
-with st.container():
-    image_column, text_column = st.columns((1, 2))
-    with image_column:
-        st.image()
-    with text_column:
-        st.subheader("")
-        st.write(
             
         )
