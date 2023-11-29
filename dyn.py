@@ -1,6 +1,6 @@
 import streamlit as st
 import os
-import requests
+from PIL import Image
 
 # CSS style for the background, text color, and headings
 background_color = "#cdc5ba"  # Dark brown/black color resembling coffee
@@ -48,6 +48,10 @@ st.markdown(html_code, unsafe_allow_html=True)
 
 # Your Streamlit content here
 st.markdown("""<h1 style="color: white;">A Computer Engineer Student's Blog</h1>""",unsafe_allow_html=True)
+
+# Assets Loader
+IMG1= Image.open("images/Streamlit_Img.jpg")
+IMG2= Image.open("images/hppy.jpg")
 
 
 
@@ -100,10 +104,10 @@ st.markdown(contact_form,unsafe_allow_html=True)
 with st.container():
     image_column, text_column = st.columns((1, 2))
     with image_column:
-        st.image(https://scontent-mnl1-2.xx.fbcdn.net/v/t1.15752-9/398286229_874824577364994_7098156601841688905_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVlwQm9jVaTE_GuLhMgLKhPiWrKRGmr5E-JaspEaavkWRTYMcJngC2R5hDnOaGHkq0ENAscx6NNq7iiHo553rk&_nc_ohc=hDNJnwsMtvMAX99eQXt&_nc_ht=scontent-mnl1-2.xx&oh=03_AdRjY8ZVAKBapPrXpK10tjg4Xz6s_A_0bsTPlM30OTrOMg&oe=658D3AAD)  
+        st.image(IMG1)  
         
     with text_column:
-        st.subheader(Challenges in Computer Engineering)
+        st.subheader("Challenges in Computer Engineering")
         st.write(
             """"
             Computer engineering students face a variety of challenges, including:
@@ -135,7 +139,7 @@ Despite these challenges, computer engineering can be a rewarding and challengin
 with st.container():
     image_column, text_column = st.columns((1, 2))
     with image_column:
-        st.image(https://scontent-mnl1-2.xx.fbcdn.net/v/t1.15752-9/399898180_855784316095659_2958606057302847658_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeE_AciErYBMC02VJmwPsCvgSfqH6yjnfUxJ-ofrKOd9TDHv2QT47gvhSGCm1GIXuQMAnJq73w3OLcXqUDfHhyVK&_nc_ohc=XRhjnUySqLkAX9ra497&_nc_ht=scontent-mnl1-2.xx&oh=03_AdS1DMYOBk-BI-qS2HpCee2K7UtM2i4QrFdEVCnxaY3XWw&oe=658D3848)
+        st.image(IMG1)
     with text_column:
         st.subheader("Happy")
         st.write(
